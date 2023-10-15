@@ -400,3 +400,4 @@ MiniFilm_app/package.json
 .DS_Store
 MiniFilm_app/.env
 MiniFilm_app/process.env
+MiniFilm_py/.gitignore
