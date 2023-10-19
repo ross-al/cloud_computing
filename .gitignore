@@ -401,3 +401,4 @@ MiniFilm_app/package.json
 MiniFilm_app/.env
 MiniFilm_app/process.env
 MiniFilm_py/.gitignore
+MiniPost_app/.env

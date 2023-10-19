@@ -1,0 +1,24 @@
+const express = require('express')
+const app = express()
+
+const mongoose = require('mongoose')
+require("dotenv").config();
+
+const bodyParser = require('body-parser')
+const postsRoute = require('./routes/posts')
+
+app.use(bodyParser.json())
+app.use('/posts', postsRoute)
+
+app.get('/', (req,res) => {
+    res.send({message: "Homepage"})
+})
+
+
+mongoose.connect(process.env.MONGODB_URI).then(()=>{
+    console.log('Your mongoDB connector is on...')
+})
+
+app.listen(3000, ()=>{
+    console.log('Your server is up and running...')
+})
